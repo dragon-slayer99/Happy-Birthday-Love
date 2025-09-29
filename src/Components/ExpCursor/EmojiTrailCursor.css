@@ -1,0 +1,41 @@
+.emoji-trail-root {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.hide-native-cursor {
+    cursor: none;
+}
+
+.emoji-dot,
+.emoji-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, opacity;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji-cursor {
+    z-index: 10000; /* Always above trail */
+}
+
+.emoji-dot {
+    transition: opacity 120ms linear;
+}
+
+@media (hover: none) {
+    .hide-native-cursor {
+        cursor: default;
+    }
+}

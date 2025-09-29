@@ -1,0 +1,35 @@
+.emoji-trail-root {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* let clicks pass through */
+    z-index: 9999; /* bring above most UI; lower if needed */
+}
+
+/* hide native cursor only when requested */
+.hide-native-cursor {
+    cursor: none;
+}
+
+.emoji-dot {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* ensure trail doesn't block interactions */
+    user-select: none;
+    will-change: transform, opacity;
+    transition: opacity 120ms linear; /* small smoothing for fade */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* small media query fallback for mobile: show native cursor for usability */
+@media (hover: none) {
+    .hide-native-cursor {
+        cursor: default;
+    }
+}

@@ -1,0 +1,195 @@
+/* Base Section */
+.custom-accordion-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.dark .custom-accordion-section {
+    background-color: black;
+}
+
+/* Container */
+.custom-accordion-container {
+    width: 100%;
+    max-width: 48rem; /* max-w-2xl */
+    margin: 0 auto;
+}
+
+/* Header */
+.custom-accordion-header {
+    text-align: center;
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.help-center-badge {
+    display: inline-block;
+    background-color: #ebf3fb;
+    color: #3b82f6;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    padding: 0.375rem 1rem; /* px-4 py-1.5 */
+    border-radius: 9999px; /* rounded-full */
+}
+
+.dark .help-center-badge {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa; /* blue-400 */
+}
+
+.custom-accordion-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    margin-top: 1rem; /* mt-4 */
+    color: #1f2937; /* text-gray-800 */
+}
+
+.dark .custom-accordion-title {
+    color: white;
+}
+
+/* Accordion Item */
+.accordion-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    margin-bottom: 1rem; /* mb-4 */
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.dark .accordion-item {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(34, 197, 94, 0.6); /* dark:border-green-500/60 */
+}
+
+/* Gradient Overlay */
+.accordion-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    background: linear-gradient(
+        to bottom right,
+        rgba(249, 250, 251, 0.5),
+        rgba(255, 255, 255, 0.3)
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dark .accordion-gradient-overlay {
+    background: linear-gradient(
+        to bottom right,
+        rgba(74, 222, 128, 0.15),
+        rgba(34, 197, 94, 0.1)
+    );
+}
+
+/* Button */
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem; /* p-6 */
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.accordion-button:hover {
+    background-color: #f9fafb; /* hover:bg-gray-50 */
+}
+
+.dark .accordion-button:hover {
+    background-color: rgba(34, 197, 94, 0.3); /* dark:hover:bg-green-800/30 */
+}
+
+.accordion-question {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+    color: #111827; /* text-gray-900 */
+}
+
+.dark .accordion-question {
+    color: #f0fdf4; /* dark:text-green-50 */
+}
+
+/* Chevron Icon */
+.accordion-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    color: #4b5563; /* text-gray-600 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.dark .accordion-icon {
+    color: #6ee7b7; /* dark:text-green-300 */
+}
+
+.accordion-icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-content.open {
+    max-height: 24rem; /* max-h-96 */
+}
+
+.accordion-answer-wrapper {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding-top: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.accordion-answer {
+    color: #374151; /* text-gray-700 */
+    line-height: 1.625; /* leading-relaxed */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.accordion-answer.visible {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.dark .accordion-answer {
+    color: #00f756; /* dark:text-green-100 */
+}
+
+/* Extra small devices (phones, portrait) */
+@media (max-width: 480px) {
+    .custom-accordion-section {
+        margin-top: 0rem;
+    }
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) {
+    .custom-accordion-section {
+        margin-top: 0rem;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .custom-accordion-section {
+        margin-top: 2rem;
+    }
+}

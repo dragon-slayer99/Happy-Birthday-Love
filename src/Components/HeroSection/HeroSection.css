@@ -1,0 +1,102 @@
+.herosection-wrapper {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    place-items: center;
+}
+
+.herosection-container {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center; /** Works on main-axis (Horizantal)*/
+    align-items: center; /** Works on cross-axis (Vertical)*/
+    flex-direction: column;
+}
+
+.herosection-content {
+    display: flex;
+    justify-content: center; /** Works on main-axis (Horizantal)*/
+    align-items: center; /** Works on cross-axis (Vertical)*/
+    flex-direction: column;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.herosection-content h1 {
+    font-family: "Allura", Arial, Helvetica, sans-serif;
+    font-size: 7em;
+    font-weight: bold;
+    background: var(--text-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    word-spacing: 3px;
+}
+
+.herosection-content h3 {
+    font-family: "Allura", Arial, Helvetica, sans-serif;
+    font-size: 5em;
+    color: var(--pink-1900);
+}
+
+.herosection-content p {
+    font-family: "EduSA", Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+/* Extra small devices (phones, portrait) */
+@media (max-width: 550px) {
+    .herosection-content h1 {
+        font-size: clamp(2em, 3em , 6em);
+        word-spacing: 3px;
+    }
+
+    .herosection-content h3 {
+        font-size: 2.3em;
+    }
+
+    .herosection-content p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) and (min-width: 550px) {
+    .herosection-content h1 {
+        font-size: 5em;
+        word-spacing: 3px;
+    }
+
+    .herosection-content h3 {
+        font-size: 4.3em;
+    }
+
+    .herosection-content p {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (max-width: 1024px) and (min-width: 770px) {
+    .herosection-content h1 {
+        font-size: 6em;
+        word-spacing: 3px;
+    }
+
+    .herosection-content h3 {
+        font-size: 4.5em;
+    }
+
+    .herosection-content p {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
