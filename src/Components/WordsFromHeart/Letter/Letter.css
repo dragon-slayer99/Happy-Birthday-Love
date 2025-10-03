@@ -1,0 +1,102 @@
+.letter-wrapper {
+    /* min-width: 100%; */
+    /* outline: 1px solid blue; */
+    margin-top: 4em;
+    scroll-margin-top: 10vh;
+}
+
+.letter-title {
+    font-family: "allura", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 4em;
+    margin: 15px 0;
+}
+
+.letter-container {
+    max-width: 80%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* outline: 1px solid red; */
+    align-items: stretch;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+.letter-card {
+    min-width: 60%;
+    margin: auto;
+    /* outline: 1px solid black; */
+
+    text-align: center;
+    padding: 20px;
+    box-shadow: -1px 0px 26px 15px rgba(0, 0, 0, 0.05),
+        0px 1px 0px 0px rgba(0, 0, 0, 0.05), 0px 2px 2px 0px rgba(0, 0, 0, 0.05),
+        0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background: var(--pink-100);
+}
+
+.letter-card h1 {
+    animation: beat 1.3s infinite;
+}
+
+.letter-card h2 {
+    font-family: "arima", Arial, Helvetica, sans-serif;
+    word-spacing: 1.5px;
+}
+
+.letter-card p {
+    text-align: justify;
+    font-style: italic;
+    
+}
+
+@keyframes beat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) {
+    .letter-wrapper {
+        margin-top: 3rem;
+    }
+    .letter-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .letter-card {
+        max-width: 80%;
+    }
+}
+
+/* Extra small devices (phones, portrait) */
+@media (max-width: 550px) {
+    .letter-title {
+        font-size: clamp(2em, 3em, 6em);
+        word-spacing: 3px;
+    }
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) and (min-width: 550px) {
+    .letter-title {
+        word-spacing: 3px;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (max-width: 1024px) and (min-width: 770px) {
+    .letter-title {
+        word-spacing: 3px;
+    }
+}

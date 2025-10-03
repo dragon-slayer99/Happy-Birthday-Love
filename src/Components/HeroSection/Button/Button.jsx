@@ -4,9 +4,9 @@ import './Button.css'
 function Button({ text }) {
 
     return (
-        <button className="button">
+        <a href="#love-letter" className="button">
             {text}
-        </button>
+        </a>
 
     )
 }

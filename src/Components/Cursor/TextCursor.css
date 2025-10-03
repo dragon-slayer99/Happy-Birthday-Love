@@ -28,8 +28,16 @@
 }
 
 /* small media query fallback for mobile: show native cursor for usability */
-@media (hover: none) {
+
+
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
     .hide-native-cursor {
-        cursor: default;
+        cursor: none;
+    }
+
+    .emoji-trail-root{
+        display: none !important;
     }
 }
+
+

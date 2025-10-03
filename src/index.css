@@ -83,12 +83,10 @@
     font-display: swap;
 }
 
-
 html {
-
     font-size: clamp(var(--type-min), calc(0.94rem + 0.4vw), var(--type-max));
+    scroll-behavior: smooth;
 }
-
 
 body {
     margin: 0;
@@ -113,7 +111,6 @@ p {
     padding: 0;
 }
 
-
 /* html,
 body,
 a,
@@ -125,3 +122,5 @@ label,
 span {
     cursor: none !important;
 } */
+
+

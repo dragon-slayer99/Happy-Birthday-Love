@@ -1,0 +1,37 @@
+.dome-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 4em;
+    font-family: "Allura";
+    color: var(--pink-1300);
+}
+
+.dome-component-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Extra small devices (phones, portrait) */
+@media (max-width: 550px) {
+    .dome-title {
+        font-size: clamp(2em, 3em, 6em);
+        word-spacing: 3px;
+    }
+    .dome-component-wrapper {
+        height: 100vh;
+    }
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) and (min-width: 550px) {
+    .dome-title {
+        word-spacing: 3px;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media (max-width: 1024px) and (min-width: 770px) {
+    .dome-title {
+        word-spacing: 3px;
+    }
+}

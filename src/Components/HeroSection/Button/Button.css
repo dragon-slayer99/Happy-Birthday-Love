@@ -1,11 +1,14 @@
 /* From Uiverse.io by Yaya12085 */
 .button {
     width: fit-content;
+    text-decoration: none;
     display: flex;
     padding: 1.2em 1rem;
     cursor: pointer;
     gap: 0.4rem;
     font-weight: bold;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
     border-radius: 30px;
     text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
     background: linear-gradient(

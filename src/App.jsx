@@ -3,8 +3,12 @@ import HeroSection from './Components/HeroSection/HeroSection';
 import TextCursor from './Components/Cursor/TextCursor';
 import DomeGallery from './Components/DomeGallery/DomeGallery';
 // import WordsFromHeart from './Components/WordsFromHeart/Accordian/WordsFromHeart';
-import Accordian from './Components/WordsFromHeart/Accordian02/Accordian';
+import LoveQuotes from './Components/WordsFromHeart/MyLoveForYou/LoveQuotes';
+import Demo from './Components/WishingAudio/demo';
+import AUDIO from '/Audios/Recording.m4a'
+import Accordian from './Components/WordsFromHeart/Accordian/Accordian';
 import EmojiTrailCursor from './Components/ExpCursor/EmojiTrailCursor';
+import Letter from './Components/WordsFromHeart/Letter/Letter';
 
 function App() {
 
@@ -16,24 +20,24 @@ function App() {
         size={28}
         hideNative={false}
       /> */}
-      <HeroSection />
-      <div style={{ width: '100%', height: '100vh'}}>
+      <HeroSection />        
+      <h1 className='dome-title'>My Treasure</h1>
+      <div className='dome-component-wrapper'>
+
         <DomeGallery 
           grayscale={false} 
           overlayBlurColor='transparent' 
           maxVerticalRotationDeg={0} 
           minRadius={800}/>
       </div>
+      <Letter/>
+      <LoveQuotes/>
       <Accordian/>
-      {/* <EmojiTrailCursor
-        emoji={"❤️"}
-        count={20}
-        size={24}
-        lerpFactor={0.18}
-        spread={10}
-        hideNative={true} /> */}
+
+      <Demo title='Birthday wishes' src={AUDIO} />
+
     </>
   )
 }
 
-export default App
+export default App;

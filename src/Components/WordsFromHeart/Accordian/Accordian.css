@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .dark .custom-accordion-section {
@@ -15,12 +15,13 @@
     width: 100%;
     max-width: 48rem; /* max-w-2xl */
     margin: 0 auto;
+    /* margin-top: 2rem; */
 }
 
 /* Header */
 .custom-accordion-header {
     text-align: center;
-    margin-bottom: 2.5rem; /* mb-10 */
+    margin-bottom: 1rem; /* mb-10 */
 }
 
 .help-center-badge {
@@ -39,10 +40,11 @@
 }
 
 .custom-accordion-title {
-    font-size: 2.25rem; /* text-4xl */
+    font-size: 4em; /* text-4xl */
     font-weight: 700; /* font-bold */
     margin-top: 1rem; /* mt-4 */
     color: #1f2937; /* text-gray-800 */
+    font-family: "Allura", Arial, Helvetica, sans-serif;
 }
 
 .dark .custom-accordion-title {
@@ -53,7 +55,7 @@
 .accordion-item {
     position: relative;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 0.75rem; /* rounded-xl */
+    border-radius: 10px; /* rounded-xl */
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
         0 8px 10px -6px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb; /* border-gray-200 */
@@ -178,10 +180,17 @@
     .custom-accordion-section {
         margin-top: 0rem;
     }
+    .custom-accordion-container{
+        max-width: 20rem;
+    }
 }
 
 /* Small devices (large phones, phablets) */
 @media (max-width: 768px) {
+    .custom-accordion-title {
+        font-size: clamp(2em, 3em, 6em);
+        word-spacing: 3px;
+    }
     .custom-accordion-section {
         margin-top: 0rem;
     }
