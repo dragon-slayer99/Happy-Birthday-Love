@@ -62,6 +62,7 @@
     margin-bottom: 1rem; /* mb-4 */
     overflow: hidden;
     backdrop-filter: blur(12px);
+    
 }
 
 .dark .accordion-item {
@@ -117,8 +118,9 @@
 
 .accordion-question {
     font-size: 1.125rem; /* text-lg */
-    font-weight: 500; /* font-medium */
+    font-weight: 700; /* font-medium */
     color: #111827; /* text-gray-900 */
+    font-family: 'Arima';
 }
 
 .dark .accordion-question {
@@ -181,7 +183,7 @@
         margin-top: 0rem;
     }
     .custom-accordion-container{
-        max-width: 20rem;
+        max-width: 90vw;
     }
 }
 

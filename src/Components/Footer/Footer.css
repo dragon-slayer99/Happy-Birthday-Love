@@ -1,0 +1,23 @@
+footer{
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center; /** Works on main-axis (Horizantal)*/
+    align-items: center; /** Works on cross-axis (Vertical)*/
+    border-top: 1px solid var(--pink-1000);
+    color: var(--pink-1200);
+    word-spacing: 2px;
+}
+
+/* Small devices (large phones, phablets) */
+@media (max-width: 768px) {
+footer{
+    height: 14vh;
+}
+}
+
+
+footer p span{
+    font-weight: bold;
+    letter-spacing: 1.6px;
+}

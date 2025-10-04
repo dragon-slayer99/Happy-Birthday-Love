@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Repeat, Repeat1 } from 'lucide-react';
 
-const Demo = ({ 
+const AudioPlayer = ({ 
   src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
   title = "Audio Track"
 }) => {
@@ -374,4 +374,4 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-export default Demo;
+export default AudioPlayer;

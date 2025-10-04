@@ -5,39 +5,43 @@ import './DomeGallery.css';
 const DEFAULT_IMAGES = [
   {
     src: '/src/assets/images/Screenshot_2023-08-31-12-05-39-05.jpg',
-    alt: 'Abstract art'
+    alt: 'Rakhi celebrations photo'
+  },
+  {
+    src: '/src/assets/images/IMG-20231005-WA0001.jpg',
+    alt: 'Queen pose'
   },
   {
     src: '/src/assets/images/Screenshot_2023-10-06-09-03-06-90.jpg',
-    alt: 'Modern sculpture'
+    alt: 'you trying to be cute'
   },
   {
     src: '/src/assets/images/Screenshot_2023-11-12-19-15-02-26.jpg',
-    alt: 'Digital artwork'
+    alt: 'dewali celebrations photo'
   },
   {
     src: '/src/assets/images/Screenshot_2023-12-07-22-26-03-96.jpg',
-    alt: 'Contemporary art'
+    alt: 'you and your friend'
   },
   {
     src: '/src/assets/images/Screenshot_2024-01-12-16-49-25-25.jpg',
-    alt: 'Geometric pattern'
+    alt: 'dusherra celebrations in clg'
   },
   {
     src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-061.jpg',
-    alt: 'Textured surface'
+    alt: 'I am going to fall in love'
   },
   {
     src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-062.jpg',
-    alt: 'Social media image'
+    alt: 'you look so beautiful'
   },
   {
     src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-063.jpg',
-    alt: 'Social media image'
+    alt: 'you are same as that flower'
   },
   {
     src: '/src/assets/images/Screenshot_2025-09-29-18-54-34-66.jpg',
-    alt: 'Social media image'
+    alt: 'my very first video of you'
   }
 ];
 

@@ -16,7 +16,7 @@ const quotes = [
         emoji: "💕"
     },
     {
-        quote: "just hearing you’re name is enough to light up my mood.",
+        quote: "Just hearing you’re name is enough to light up my mood.",
         emoji: "💘"
     },
     {

@@ -48,6 +48,8 @@
     font-size: 1.5em;
     align-content: center;
     margin-bottom: 20px;
+    max-width: 800px;
+    
 }
 
 /* Extra small devices (phones, portrait) */
