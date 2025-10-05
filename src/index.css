@@ -119,7 +119,7 @@ p {
     padding: 0;
 }
 
-/* html,
+html,
 body,
 a,
 button,
@@ -129,6 +129,6 @@ textarea,
 label,
 span {
     cursor: none !important;
-} */
+}
 
 
