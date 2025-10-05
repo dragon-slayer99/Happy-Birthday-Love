@@ -1,0 +1,1 @@
+import{o as e,t}from"./index-C0LzyB3R.js";var n=e(t());function r(){return(0,n.jsx)(`footer`,{children:(0,n.jsxs)(`p`,{children:[`Made with ❤️ by `,(0,n.jsx)(`span`,{children:` your boyfriend.`})]})})}var i=r;export{i as default};
