@@ -1,0 +1,34 @@
+import{n as e,o as t,t as n}from"./index-CvuVI28J.js";
+/**
+* @license lucide-react v0.544.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var r=e=>e.replace(/([a-z0-9])([A-Z])/g,`$1-$2`).toLowerCase(),i=e=>e.replace(/^([A-Z])|[\s-_]+(\w)/g,(e,t,n)=>n?n.toUpperCase():t.toLowerCase()),a=e=>{let t=i(e);return t.charAt(0).toUpperCase()+t.slice(1)},o=(...e)=>e.filter((e,t,n)=>!!e&&e.trim()!==``&&n.indexOf(e)===t).join(` `).trim(),s=e=>{for(let t in e)if(t.startsWith(`aria-`)||t===`role`||t===`title`)return!0},c={xmlns:`http://www.w3.org/2000/svg`,width:24,height:24,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:2,strokeLinecap:`round`,strokeLinejoin:`round`},l=t(e()),u=(0,l.forwardRef)(({color:e=`currentColor`,size:t=24,strokeWidth:n=2,absoluteStrokeWidth:r,className:i=``,children:a,iconNode:u,...d},f)=>(0,l.createElement)(`svg`,{ref:f,...c,width:t,height:t,stroke:e,strokeWidth:r?Number(n)*24/Number(t):n,className:o(`lucide`,i),...!a&&!s(d)&&{"aria-hidden":`true`},...d},[...u.map(([e,t])=>(0,l.createElement)(e,t)),...Array.isArray(a)?a:[a]])),d=(e,t)=>{let n=(0,l.forwardRef)(({className:n,...i},s)=>(0,l.createElement)(u,{ref:s,iconNode:t,className:o(`lucide-${r(a(e))}`,`lucide-${e}`,n),...i}));return n.displayName=a(e),n},f=d(`pause`,[[`rect`,{x:`14`,y:`3`,width:`5`,height:`18`,rx:`1`,key:`kaeet6`}],[`rect`,{x:`5`,y:`3`,width:`5`,height:`18`,rx:`1`,key:`1wsw3u`}]]),p=d(`play`,[[`path`,{d:`M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z`,key:`10ikf1`}]]),m=d(`skip-back`,[[`path`,{d:`M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z`,key:`15892j`}],[`path`,{d:`M3 20V4`,key:`1ptbpl`}]]),h=d(`skip-forward`,[[`path`,{d:`M21 4v16`,key:`7j8fe9`}],[`path`,{d:`M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z`,key:`zs4d6`}]]),g=t(n()),_=({src:e=`https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3`,title:t=`Audio Track`})=>{let n=(0,l.useRef)(null),[r,i]=(0,l.useState)(!1),[a,o]=(0,l.useState)(0),[s,c]=(0,l.useState)(0),[u,d]=(0,l.useState)(!1);(0,l.useEffect)(()=>{let e=n.current;if(!e)return;let t=()=>{c(e.duration)},r=()=>{u||o(e.currentTime)};return e.addEventListener(`loadeddata`,t),e.addEventListener(`timeupdate`,r),()=>{e.removeEventListener(`loadeddata`,t),e.removeEventListener(`timeupdate`,r)}},[u]);let _=()=>{let e=n.current;r?e.pause():e.play(),i(!r)},y=()=>{let e=n.current;e.currentTime=Math.min(e.currentTime+5,s)},b=()=>{let e=n.current;e.currentTime=Math.max(e.currentTime-5,0)},x=e=>{let t=n.current,r=e.target.value/100*s;t.currentTime=r,o(r)},S=()=>{d(!0)},C=()=>{d(!1)},w=e=>{if(isNaN(e))return`0:00`;let t=Math.floor(e/60),n=Math.floor(e%60);return`${t}:${n.toString().padStart(2,`0`)}`},T=s?a/s*100:0;return(0,g.jsxs)(`div`,{style:v.container,children:[(0,g.jsx)(`audio`,{ref:n,src:e,preload:`metadata`}),(0,g.jsxs)(`div`,{style:v.player,children:[(0,g.jsx)(`div`,{style:v.titleContainer,children:(0,g.jsx)(`h3`,{style:v.title,children:t})}),(0,g.jsxs)(`div`,{style:v.progressContainer,children:[(0,g.jsx)(`span`,{style:v.time,children:w(a)}),(0,g.jsx)(`div`,{style:v.progressWrapper,children:(0,g.jsxs)(`div`,{style:v.progressBar,children:[(0,g.jsx)(`div`,{style:{...v.progressFill,width:`${T}%`}}),(0,g.jsx)(`input`,{type:`range`,min:`0`,max:`100`,value:T,onChange:x,onMouseDown:S,onMouseUp:C,onTouchStart:S,onTouchEnd:C,style:v.progressInput})]})}),(0,g.jsx)(`span`,{style:v.time,children:w(s)})]}),(0,g.jsxs)(`div`,{style:v.controls,children:[(0,g.jsx)(`button`,{onClick:b,style:{...v.controlButton,...v.skipButton},"aria-label":`Skip backward 5 seconds`,children:(0,g.jsx)(m,{size:24})}),(0,g.jsx)(`button`,{onClick:_,style:{...v.controlButton,...v.playButton},"aria-label":r?`Pause`:`Play`,children:r?(0,g.jsx)(f,{size:28}):(0,g.jsx)(p,{size:28})}),(0,g.jsx)(`button`,{onClick:y,style:{...v.controlButton,...v.skipButton},"aria-label":`Skip forward 5 seconds`,children:(0,g.jsx)(h,{size:24})})]})]})]})},v={container:{display:`flex`,justifyContent:`center`,alignItems:`center`,background:`transparent`,padding:`20px`,fontFamily:`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`},player:{width:`100%`,maxWidth:`450px`,background:`var(--pink-300)`,borderRadius:`20px`,padding:`35px 30px`},titleContainer:{marginBottom:`25px`,textAlign:`center`},title:{margin:0,fontFamily:`"Allura", Arial, Helvetica, sans-serif`,fontSize:`2rem`,fontWeight:`500`,color:`#ffffff`,letterSpacing:`0.3px`},progressContainer:{display:`flex`,alignItems:`center`,gap:`12px`,marginBottom:`30px`},time:{fontSize:`12px`,fontWeight:`500`,color:`#888888`,minWidth:`40px`},progressWrapper:{flex:1,position:`relative`},progressBar:{position:`relative`,height:`4px`,background:`var(--pink-50)`,borderRadius:`10px`,overflow:`hidden`},progressFill:{position:`absolute`,top:0,left:0,height:`100%`,background:`var(--pink-1300)`,borderRadius:`10px`,transition:`width 0.1s ease`},progressInput:{position:`absolute`,top:`50%`,left:0,transform:`translateY(-50%)`,width:`100%`,height:`20px`,opacity:0,cursor:`pointer`,margin:0},controls:{display:`flex`,alignItems:`center`,justifyContent:`center`,gap:`20px`,marginBottom:`25px`},controlButton:{border:`none`,background:`transparent`,color:`#ffffff`,cursor:`pointer`,display:`flex`,alignItems:`center`,justifyContent:`center`,transition:`all 0.2s ease`,outline:`none`},playButton:{width:`60px`,height:`60px`,borderRadius:`50%`,background:`var(--pink-1100)`},skipButton:{width:`45px`,height:`45px`,borderRadius:`50%`,background:`var(--pink-1000)`},smallButton:{width:`40px`,height:`40px`,borderRadius:`50%`,background:`var(--pink-1000)`},activeButton:{background:`#667eea`,color:`#ffffff`},volumeContainer:{display:`flex`,alignItems:`center`,justifyContent:`center`,gap:`12px`,width:`100%`},volumeSlider:{flex:1,maxWidth:`200px`,height:`4px`,borderRadius:`10px`,background:`var(--pink-50)`,outline:`none`,cursor:`pointer`,appearance:`none`,WebkitAppearance:`none`}},y=document.createElement(`style`);y.textContent=`
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--pink-1300);
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--pink-1300);
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+`,document.head.appendChild(y);var b=_;export{b as default};
