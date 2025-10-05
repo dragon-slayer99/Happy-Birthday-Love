@@ -1,7 +1,3 @@
-
-
-
-
 .sphere-root {
     position: relative;
     width: 100%;
@@ -215,12 +211,12 @@ main.sphere-main {
         /* Allow vertical scrolling on mobile */
         touch-action: pan-y;
     }
-    
+
     .stage {
         /* Allow horizontal panning for rotation */
         touch-action: pan-x pan-y;
     }
-    
+
     .item__image {
         /* Optimize touch for mobile */
         touch-action: manipulation;
