@@ -2,45 +2,57 @@ import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
+// Import all images
+import rakhi from '../../assets/images/Screenshot_2023-08-31-12-05-39-05.jpg';
+import queen from '../../assets/images/IMG-20231005-WA0001.jpg';
+import cute from '../../assets/images/Screenshot_2023-10-06-09-03-06-90.jpg';
+import diwali from '../../assets/images/Screenshot_2023-11-12-19-15-02-26.jpg';
+import friend from '../../assets/images/Screenshot_2023-12-07-22-26-03-96.jpg';
+import dussehra from '../../assets/images/Screenshot_2024-01-12-16-49-25-25.jpg';
+import love1 from '../../assets/images/Screenshot_2024-04-10-23-39-49-061.jpg';
+import love2 from '../../assets/images/Screenshot_2024-04-10-23-39-49-062.jpg';
+import love3 from '../../assets/images/Screenshot_2024-04-10-23-39-49-063.jpg';
+import video from '../../assets/images/Screenshot_2025-09-29-18-54-34-66.jpg';
+
 const DEFAULT_IMAGES = [
   {
-    src: '/src/assets/images/Screenshot_2023-08-31-12-05-39-05.jpg',
+    src: rakhi,
     alt: 'Rakhi celebrations photo'
   },
   {
-    src: '/src/assets/images/IMG-20231005-WA0001.jpg',
+    src: queen,
     alt: 'Queen pose'
   },
   {
-    src: '/src/assets/images/Screenshot_2023-10-06-09-03-06-90.jpg',
+    src: cute,
     alt: 'you trying to be cute'
   },
   {
-    src: '/src/assets/images/Screenshot_2023-11-12-19-15-02-26.jpg',
+    src: diwali,
     alt: 'dewali celebrations photo'
   },
   {
-    src: '/src/assets/images/Screenshot_2023-12-07-22-26-03-96.jpg',
+    src: friend,
     alt: 'you and your friend'
   },
   {
-    src: '/src/assets/images/Screenshot_2024-01-12-16-49-25-25.jpg',
+    src: dussehra,
     alt: 'dusherra celebrations in clg'
   },
   {
-    src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-061.jpg',
+    src: love1,
     alt: 'I am going to fall in love'
   },
   {
-    src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-062.jpg',
+    src: love2,
     alt: 'you look so beautiful'
   },
   {
-    src: '/src/assets/images/Screenshot_2024-04-10-23-39-49-063.jpg',
+    src: love3,
     alt: 'you are same as that flower'
   },
   {
-    src: '/src/assets/images/Screenshot_2025-09-29-18-54-34-66.jpg',
+    src: video,
     alt: 'my very first video of you'
   }
 ];
