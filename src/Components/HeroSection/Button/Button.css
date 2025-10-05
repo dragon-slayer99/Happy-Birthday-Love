@@ -30,6 +30,10 @@
     background-position: left center;
     box-shadow: 0 30px 10px -20px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.8s;
+    will-change: opacity, transform;
 }
 
 .button:hover {

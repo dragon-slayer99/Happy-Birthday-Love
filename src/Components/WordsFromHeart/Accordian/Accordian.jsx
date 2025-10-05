@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from 'framer-motion';
 import './Accordian.css'
 
 const faqData = [
@@ -25,9 +26,21 @@ const faqData = [
   },
 ];
 
-const AccordionItem = ({ question, answer, isOpen, onClick }) => {
+const itemVariants = {
+  hidden: { opacity: 0, y: 16, scale: 0.98 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 120, damping: 16 } }
+};
+
+const AccordionItem = ({ question, answer, isOpen, onClick, index }) => {
   return (
-    <div className="accordion-item">
+    <motion.div
+      className="accordion-item"
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ type: 'spring', stiffness: 120, damping: 16, delay: index * 0.06 }}
+    >
       <div className="accordion-gradient-overlay"></div>
       <button className="accordion-button" onClick={onClick}>
         <span className="accordion-question">{question}</span>
@@ -53,7 +66,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -66,11 +79,13 @@ export default function Accordian() {
 
   return (
     <div className="custom-accordion-section">
-      <div className="custom-accordion-container">
+      <motion.div className="custom-accordion-container">
         <div className="custom-accordion-header">
-          <h1 className="custom-accordion-title">My Thoughts</h1>
+          <motion.h1 className="custom-accordion-title" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+            My Thoughts
+          </motion.h1>
         </div>
-        <div className="accordion-list">
+        <motion.div className="accordion-list">
           {faqData.map((faq, index) => (
             <AccordionItem
               key={index}
@@ -78,10 +93,11 @@ export default function Accordian() {
               answer={faq.answer}
               isOpen={openIndex === index}
               onClick={() => handleItemClick(index)}
+              index={index}
             />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

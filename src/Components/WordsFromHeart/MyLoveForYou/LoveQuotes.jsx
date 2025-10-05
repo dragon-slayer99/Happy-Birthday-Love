@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './LoveQuotes.css';
 
 const quotes = [
@@ -25,18 +26,36 @@ const quotes = [
     },
 ];
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 16, scale: 0.98 },
+    show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { type: 'spring', stiffness: 120, damping: 16, mass: 0.6 }
+    },
+};
+
 const QuotesCard = ({ loveQuotes = [] }) => {
     return (
         <div className="love-quotes-section">
             <h1 className="love-quotes-title">Words from My Heart</h1>
             <div className="quotes-grid">
                 {loveQuotes.map((quote, index) => (
-                    <div key={index} className="quote-card">
+                    <motion.div
+                        key={index}
+                        className="quote-card"
+                        variants={itemVariants}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.25 }}
+                        transition={{ type: 'spring', stiffness: 120, damping: 16, mass: 0.6, delay: index * 0.06 }}
+                    >
                         <div className="quote-content">
                             <div className="quote-emoji">{quote.emoji}</div>
                             <p className="quote-text">"{quote.quote}"</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

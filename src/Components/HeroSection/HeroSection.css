@@ -1,7 +1,6 @@
 .herosection-wrapper {
     width: 100%;
     height: 100vh;
-
     display: flex;
     place-items: center;
 }
@@ -35,12 +34,20 @@
     background-clip: text;
     color: transparent;
     word-spacing: 3px;
+        opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+    will-change: opacity, transform;
 }
 
 .herosection-content h3 {
     font-family: "Allura", Arial, Helvetica, sans-serif;
     font-size: 5em;
     color: var(--pink-1900);
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+    will-change: opacity, transform;
 }
 
 .herosection-content p {
@@ -49,13 +56,16 @@
     align-content: center;
     margin-bottom: 20px;
     max-width: 800px;
-    
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+    will-change: opacity, transform;
 }
 
 /* Extra small devices (phones, portrait) */
 @media (max-width: 550px) {
     .herosection-content h1 {
-        font-size: clamp(2em, 3em , 6em);
+        font-size: clamp(2em, 3em, 6em);
         word-spacing: 3px;
     }
 
@@ -100,5 +110,20 @@
     .herosection-content p {
         font-size: 1.5em;
         margin-bottom: 20px;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(20px);
+        display: none;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+        display: block;
     }
 }

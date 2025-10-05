@@ -1,4 +1,5 @@
 import './Letter.css';
+import { motion } from 'framer-motion';
 
 
 const letters = [
@@ -16,17 +17,39 @@ const letters = [
 
 
 
+// Remove container staggering; animate each card when it enters viewport
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 18, scale: 0.98 },
+    show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { type: 'spring', stiffness: 120, damping: 16, mass: 0.6 },
+    },
+};
+
 function Letter() {
     return (
         <section className='letter-wrapper' id='love-letter'>
             <h1 className='letter-title'>Confession</h1>
-            <div className="letter-container">
-                { letters.map((letter, index) => (
-                    <div key = {`${index},${letter.emoji},${letter.title}`} className='letter-card'>
+            <div
+                className="letter-container"
+            >
+                {letters.map((letter, index) => (
+                    <motion.div
+                        key={`${index},${letter.emoji},${letter.title}`}
+                        className='letter-card'
+                        variants={cardVariants}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.25 }}
+                        transition={{ type: 'spring', stiffness: 120, damping: 16, mass: 0.6, delay: index * 0.08 }}
+                    >
                         <h1>{letter.emoji}</h1>
                         <h2>{letter.title}</h2>
                         <p>{letter.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
