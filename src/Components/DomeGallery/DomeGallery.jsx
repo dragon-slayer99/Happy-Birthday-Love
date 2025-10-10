@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
-// Import all images
 import rakhi from '../../assets/images/Screenshot_2023-08-31-12-05-39-05.jpg';
 import queen from '../../assets/images/IMG-20231005-WA0001.jpg';
 import cute from '../../assets/images/Screenshot_2023-10-06-09-03-06-90.jpg';

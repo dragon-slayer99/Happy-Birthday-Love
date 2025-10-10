@@ -4,7 +4,7 @@ import AUDIO from '/Audios/wishesAudio.mp3'
 
 const HeroSection = lazy(() => import('./Components/HeroSection/HeroSection'))
 const TextCursor = lazy(() => import('./Components/Cursor/TextCursor'))
-const DomeGallery = lazy(() => import('./Components/DomeGallery/DomeGallery'))
+const DomeComponent = lazy(() => import('./Components/DomeGallery/DomeComponent'))
 const FinalWords = lazy(() => import('./Components/FinalWords/FinalWords'))
 const LoveQuotes = lazy(() => import('./Components/WordsFromHeart/MyLoveForYou/LoveQuotes'))
 const Demo = lazy(() => import('./Components/WishingAudio/AudioPlayer'))
@@ -18,8 +18,8 @@ function App() {
     <>
       <Suspense fallback={null}>
         <TextCursor
-          emoji="❤️" 
-          count={6} 
+          emoji="❤️"
+          count={6}
           size={28}
           hideNative={false}
         />
@@ -27,16 +27,11 @@ function App() {
       <Suspense fallback={null}>
         <HeroSection />
       </Suspense>
-      <h1 className='dome-title'>My Treasure</h1>
-      <div className='dome-component-wrapper'>
-        <Suspense fallback={null}>
-          <DomeGallery
-            grayscale={false}
-            overlayBlurColor='transparent'
-            maxVerticalRotationDeg={0}
-            minRadius={800} />
-        </Suspense>
-      </div>
+
+      <Suspense fallback={null}>
+        <DomeComponent />
+      </Suspense>
+
       <Suspense fallback={null}>
         <Letter />
       </Suspense>
