@@ -1,4 +1,4 @@
-/* Ensure Dancing Script is available */
+
 
 .love-quotes-section {
     text-align: center;
@@ -7,9 +7,9 @@
 
 .love-quotes-title {
     font-family: "allura", Arial, Helvetica, sans-serif;
-    font-size: clamp(2rem, 3rem, 6rem); /* 3xl ≈ 36px → 1.875rem at 16px base */
-    color: #1f2937; /* gray-800 */
-    margin-bottom: 1rem; /* 8 spacing units ≈ 2rem */
+    font-size: clamp(2rem, 3rem, 6rem); 
+    color: #1f2937; 
+    margin-bottom: 1rem; 
 }
 
 .quotes-grid {
@@ -40,7 +40,7 @@
         #fce7f3,
         #ffe4e6
     );
-    border: 1px solid #fbcfe8; /* border-pink-200 */
+    border: 1px solid #fbcfe8; 
     border-radius: 10px;
     box-shadow: -1px 0px 26px 15px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(0, 0, 0, 0.05), 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
     padding: 1.5rem; /* p-6 */
@@ -49,21 +49,21 @@
 
 .quote-card:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
+        0 8px 10px -6px rgba(0, 0, 0, 0.1); 
     transform: scale(1.05);
 }
 
 .quote-emoji {
-    font-size: 1.875rem; /* text-3xl */
-    margin-bottom: 1rem; /* mb-4 */
+    font-size: 1.875rem; 
+    margin-bottom: 1rem; 
 }
 
 .quote-text {
     font-family: "EduSA", Arial, Helvetica, sans-serif;
-    font-size: 1.125rem; /* text-lg */
+    font-size: 1.125rem;
     font-style: italic;
-    color: #374151; /* text-gray-700 */
-    line-height: 1.625; /* leading-relaxed */
+    color: #374151; 
+    line-height: 1.625; 
     margin: 0;
 }
 

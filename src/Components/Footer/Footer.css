@@ -2,8 +2,8 @@ footer{
     text-align: center;
     height: 20vh;
     display: flex;
-    justify-content: center; /** Works on main-axis (Horizantal)*/
-    align-items: center; /** Works on cross-axis (Vertical)*/
+    justify-content: center; 
+    align-items: center; 
     border-top: 1px solid var(--pink-1000);
     color: var(--pink-1200);
     word-spacing: 2px;

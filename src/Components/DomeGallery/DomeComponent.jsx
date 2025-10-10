@@ -1,5 +1,7 @@
-import './DomeGallery';
+
 import './DomeComponent.css'
+
+import DomeGallery from './DomeGallery'
 export default function DomeComponent() {
     return (
         <>
